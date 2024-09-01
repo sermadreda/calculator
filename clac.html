@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حاسبة بسيطة</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input[type="number"] {
+            width: 50px;
+            text-align: center;
+        }
+        button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>حاسبة بسيطة</h1>
+    <input id="num1" type="number" placeholder="رقم 1">
+    +
+    <input id="num2" type="number" placeholder="رقم 2">
+    <br>
+    <button onclick="calculate()">احسب</button>
+    <p id="result"></p>
+
+    <script>
+        function calculate() {
+            var num1 = document.getElementById('num1').value;
+            var num2 = document.getElementById('num2').value;
+            var result = parseFloat(num1) + parseFloat(num2);
+            document.getElementById('result').textContent = "النتيجة: " + result;
+        }
+    </script>
+</body>
+</html>
